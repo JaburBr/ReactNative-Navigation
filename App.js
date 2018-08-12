@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import WelcomeScreen from './screens/WelcomeScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -9,7 +9,9 @@ import AppDrawerNavigation from './screens/DrawerNavigation';
 export default class App extends Component {
   render() {
     return (
-      <AppStackNavigation />
+      <SafeAreaView style={{ flex: 1 }}>
+        <AppStackNavigation />
+      </SafeAreaView>
     );
   }
 }
