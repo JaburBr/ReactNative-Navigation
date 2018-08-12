@@ -18,8 +18,16 @@ const AppStackNavigation = new StackNavigator({
   WelcomeScreen: { screen: WelcomeScreen },
   LoginScreen: { screen: LoginScreen },
   SignUpScreen: { screen: SignUpScreen },
-  DrawerNavigation: { screen: AppDrawerNavigation }
+  DrawerNavigation: {
+    screen: AppDrawerNavigation,
+    navigationOptions: {
+      header: null
+    }
+  }
 }, {
+    navigationOptions: {
+      gesturesEnabled: false
+    },
     initialRouteName: 'WelcomeScreen'
   });
 
